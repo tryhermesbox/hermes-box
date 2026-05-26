@@ -1,0 +1,21 @@
+{
+  "name": "hermes-box",
+  "version": "0.2.0",
+  "description": "Self-hosting toolkit for Hermes Agent on Hetzner Cloud.",
+  "type": "module",
+  "bin": {
+    "hermes-box": "./bin/hermes-box.js"
+  },
+  "scripts": {
+    "plan": "node ./bin/hermes-box.js plan",
+    "provision": "node ./bin/hermes-box.js provision",
+    "status": "node ./bin/hermes-box.js status",
+    "logs": "node ./bin/hermes-box.js logs",
+    "destroy": "node ./bin/hermes-box.js destroy",
+    "test": "node --test"
+  },
+  "engines": {
+    "node": ">=20"
+  },
+  "license": "MIT"
+}
