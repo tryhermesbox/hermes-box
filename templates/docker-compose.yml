@@ -1,0 +1,16 @@
+services:
+  hermes-agent:
+    image: "{{HERMES_AGENT_IMAGE}}"
+    restart: unless-stopped
+    env_file:
+      - /opt/hermes-agent/.env
+    ports:
+      - "{{HERMES_AGENT_PORT}}:{{HERMES_AGENT_PORT}}"
+    volumes:
+      - /opt/hermes-agent/data:/app/data
+      - /opt/hermes-agent/logs:/app/logs
+    healthcheck:
+      test: ["CMD", "curl", "-fsS", "http://127.0.0.1:{{HERMES_AGENT_PORT}}/health"]
+      interval: 30s
+      timeout: 5s
+      retries: 5
