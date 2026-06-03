@@ -1,0 +1,16 @@
+{
+  "server": {
+    "name": "hermes-box-01",
+    "type": "cx22",
+    "image": "ubuntu-24.04",
+    "location": "fsn1"
+  },
+  "agent": {
+    "image": "ghcr.io/tryhermesbox/hermes-agent:latest",
+    "port": 8787
+  },
+  "network": {
+    "sshAllowedCidr": "0.0.0.0/0",
+    "agentAllowedCidr": "0.0.0.0/0"
+  }
+}
