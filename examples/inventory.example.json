@@ -1,0 +1,16 @@
+{
+  "createdAt": "2026-06-09T09:00:00.000Z",
+  "server": {
+    "id": 123456789,
+    "name": "hermes-box-01",
+    "status": "running",
+    "ipv4": "203.0.113.10",
+    "type": "cx22",
+    "location": "fsn1"
+  },
+  "agent": {
+    "image": "ghcr.io/tryhermesbox/hermes-agent:latest",
+    "port": 8787,
+    "healthUrl": "http://203.0.113.10:8787/health"
+  }
+}
